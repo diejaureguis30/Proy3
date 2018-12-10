@@ -33,7 +33,7 @@ export class RegistrarsePage {
   Listo(){
     if (this.Correo.length>0 || this.Contrasena.length>8)
     {
-      this.registro.push({nombre:this.nombre, Contrasena:this.Contrasena, telefono:this.telefono, Correo:this.Correo, comprado:[]});
+      this.registro.push({nombre:this.nombre, Contrasena:this.Contrasena, telefono:this.telefono, Correo:this.Correo});
       this.storage.set('registro', JSON.stringify(this.registro));
       this.navCtrl.pop();
     }
