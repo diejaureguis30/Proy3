@@ -36,7 +36,7 @@ export class HomePage {
   Entrar(){
     
     let index=this.Registro.findIndex(Registro => Registro.Correo == this.Correo);
-    //let index2=this.Registro.findIndex(c=>c.Contrasena == this.Contrasena)
+    //let index2=this.Registro.findIndex(Registro=>Registro.Contrasena == this.Contrasena)
 
     if (index>0) //index2>=8
     {

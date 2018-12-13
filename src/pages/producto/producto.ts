@@ -20,6 +20,11 @@ precio='';
 vendedor='';
 producto='';
 imagen='';
+estrellas='';
+disponibles='';
+evalua='';
+resena='';
+fecha='';
 car=CarritoPage;
 compra=[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -28,6 +33,10 @@ compra=[];
     this.precio=this.navParams.get('productos').precio;
     this.vendedor=this.navParams.get('productos').vendedor;
     this.imagen=this.navParams.get('productos').imagen;
+    this.disponibles=this.navParams.get('productos').disponibles;
+    this.evalua=this.navParams.get('productos').evaluador;
+    this.resena=this.navParams.get('productos').resena;
+    this.fecha=this.navParams.get('productos').fecha;
     this.compra=this.navParams.get('canasta')
   
   }

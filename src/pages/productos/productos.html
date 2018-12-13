@@ -20,12 +20,12 @@
 
 
 
-<ion-content padding>
+<ion-content padding style='background-color:#102542'>
   <ion-list>
-    <ion-list-header>
+    <ion-list-header style='background-color: #A8D0DB'>
       Productos
     </ion-list-header>
-    <ion-item *ngFor="let p of Productos" (click)="verProducto(p)">
+    <ion-item *ngFor="let p of Productos" (click)="verProducto(p)" style='background-color: #A8D0DB'>
      <ion-avatar item-start>
        <img src={{p.imagen}}>
      </ion-avatar> 

@@ -12,29 +12,47 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style='background-color:#102542'>
   <img src={{producto.imagen}}>
-  <ion-card>
+  <ion-card  style="border-radius: 10px">
     <ion-card-header>
       {{producto.nombre}}
     </ion-card-header>
     <ion-card-content>
-      <ion-col>
-        <ion-row>
-          {{producto.precio}}
-        </ion-row>
-        <ion-row>
-          {{producto.vendedor}}
-        </ion-row>
-        <ion-row>
-          {{producto.lanzamiento}}
-        </ion-row>
-        <ion-row>
-          {{producto.diponibles}}
-        </ion-row>
+        <ion-col>
+            <ion-row>
+              Precio: {{producto.precio}}
+            </ion-row>
+            <ion-row>
+              Vendedor: {{producto.vendedor}}
+            </ion-row>
+            <ion-row>
+              Lanzamiento:{{producto.lanzamiento}}
+            </ion-row>
+            <ion-row>
+              Disponibles: {{producto.disponibles}}
+            </ion-row>
       </ion-col>
     </ion-card-content>
   </ion-card>
+
+  <ion-card style="border-radius: 10px">
+
+      <ion-item style=' background-color: #A8D0DB'>
+        <ion-avatar item-start>
+          <img src="../assets/avatar.png">
+        </ion-avatar>
+        <h2>{{evalua}}</h2>
+        <p>{{producto.fecha}}</p>
+      </ion-item>
+    
+      <ion-card-content>
+        <p>{{producto.resena}}</p>
+        <p><ion-icon name="star" *ngFor="let s of producto.valoracion"></ion-icon></p>
+      </ion-card-content>
+    
+    </ion-card>
+ 
 
   <button ion-button block (click)="Agregar()"> Agregar a la canasta <ion-col> <ion-icon name="basket"></ion-icon> </ion-col></button>
 </ion-content>
