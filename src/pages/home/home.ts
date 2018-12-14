@@ -35,10 +35,9 @@ export class HomePage {
   }
   Entrar(){
     
-    let index=this.Registro.findIndex(Registro => Registro.Correo == this.Correo);
-    //let index2=this.Registro.findIndex(Registro=>Registro.Contrasena == this.Contrasena)
+    let index=this.Registro.findIndex(Registro => Registro.Correo == this.Correo && Registro.Contrasena == this.Contrasena);
 
-    if (index>0) //index2>=8
+    if (index>0) 
     {
       const alert=this.alertCtrl.create({
         title:"Bienvenido", buttons:["ok"]
